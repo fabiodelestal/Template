@@ -16,6 +16,9 @@ build-backend = "hatchling.build"
 packages = ["src/{{ cookiecutter.project_slug }}"]
 
 # ===== RUFF =====
+# Docs: https://docs.astral.sh/ruff/rules/
+# Para ignorar una regla en una línea: # noqa: REGLA
+# Ejemplo: def func(a, b, c, d, e):  # noqa: PLR0913
 [tool.ruff]
 line-length = 88
 target-version = "py312"
@@ -29,10 +32,12 @@ select = [
     "UP",   # pyupgrade
     "B",    # flake8-bugbear
     "SIM",  # flake8-simplify
-    "D",    # pydocstyle
+    "D",    # pydocstyle (docstrings)
     "ARG",  # flake8-unused-arguments
     "RET",  # flake8-return
     "C4",   # flake8-comprehensions
+    "C901", # mccabe complexity
+    "PLR",  # pylint refactoring
 ]
 
 [tool.ruff.lint.pydocstyle]
@@ -44,3 +49,4 @@ convention = "google"
 # ===== TY =====
 [tool.ty]
 python-version = "3.12"
+
