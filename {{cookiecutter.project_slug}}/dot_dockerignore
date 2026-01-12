@@ -1,0 +1,30 @@
+# Git
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Entorno
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# Tests
+tests/
+.pytest_cache/
+.coverage
+
+# Docs
+*.md
+docs/
+
+# Logs
+logs/
+*.log

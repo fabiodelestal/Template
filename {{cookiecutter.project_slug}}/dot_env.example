@@ -1,0 +1,3 @@
+# Variables de entorno
+DEBUG=false
+LOG_LEVEL=INFO
